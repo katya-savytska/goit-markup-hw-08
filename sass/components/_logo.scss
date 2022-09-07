@@ -1,0 +1,21 @@
+.logo {
+    font-family: 'Raleway';
+    @include font (700, 26px, 1.19, null);
+    text-decoration: none;
+    color: $primary-text-color;
+
+    @media screen and (min-width:1200px) {
+        margin-right: 93px;
+    }
+
+    &--footer {
+        display: block;
+        margin-bottom: 20px;
+        margin-right: auto;
+        color: #ffffff;
+
+        @media screen and (min-width:768px) {
+            display: inline-block;
+        }
+    }
+}

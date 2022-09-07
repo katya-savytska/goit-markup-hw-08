@@ -1,0 +1,80 @@
+.features {
+    align-items: center;
+    padding-bottom: 0px;
+    padding-top: 94px;
+
+    &__list {
+        @include flex(flex, flex-start, null);
+        padding: 0px;
+        margin: 0px;
+    }
+
+    &__item {
+        margin-left: 30px;
+        justify-content: center;
+
+        &:first-child {
+          margin-left: 0px;
+        }
+    }
+
+    &__icon {
+        @include flex(flex, center, center);
+        background-color: #F5F4FA;
+        width: 270px;
+        height: 120px;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        @include font(700, 14px, 1.14, null);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        color: $subtittle-text-color;
+    }
+}
+
+.services {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__title {
+        @include font(700, 36px, 1.16, null);
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        padding: 0px;
+        margin: 0px;
+    }
+    &__item {
+        margin-left: 30px;
+
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+
+    &__thumb {
+        position: relative;
+    }
+
+    &__desc {
+        @include flex(flex, center, center);
+        @include font(700, 14px, 1.14, 0.03em);
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        background: rgba(47, 48, 58, 0.8);
+        width: 370px;
+        height: 70px;
+    }
+}

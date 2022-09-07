@@ -1,0 +1,129 @@
+.footer {
+    background: #2F303A;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__container {
+        display: flex;
+        position: relative;
+    }  
+}
+
+.footer-adress {
+    &__list {
+        padding: 0px;
+        margin: 0;
+    }
+
+    &__item {
+        margin-top: 9px;
+
+        &:first-child {
+            margin-top: 0px;
+        }
+    }
+
+    &__contacts {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        font-style: normal;
+        padding: 0px;
+        margin: 0px;
+    
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover, &:focus {
+            color: $accent-color;
+        }
+    }
+}
+
+.socials {
+    margin-left: 70px;
+    margin-top: 12px;
+    width: 206px;
+
+    &__title {
+        text-align: left;
+        @include font(700, 14px, 1.14, 0.03em );
+        font-family: 'Roboto';
+        font-style: normal;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+    }
+
+    &__link {
+        @include flex(flex, center, center);
+        background-color: #43444D;
+        height: 44px;
+        width: 44px;
+        border-radius: 50%;
+        fill: #ffffff;
+        cursor: pointer;
+    
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover, &:focus {
+            background-color: $accent-color;
+        }
+    }
+}
+
+.subscription {
+    position: absolute;
+    right: 0;
+
+    &__title {
+        font-family: inherit;
+        @include font(700, null, 1.14, 0.03em);
+        text-transform: uppercase;
+        color: $card-color;
+        margin-bottom: 20px;
+        margin-top: 12px;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__input {
+        @include font(null, 16px, 1.25, 0.03em);
+        color: rgba(255, 255, 255, 0.6);
+        background-color: #2F303A;
+
+        width: 358px;
+        height: 50px;
+        padding: 15px 16px;
+        border-radius: $border-radius;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    &__button {
+        @include flex(flex, center, center);
+        @include font(700, 16px, 1.9, null);
+        font-family: inherit;
+        width: 200px;
+        height: 50px;
+        margin-left: 12px;
+    
+        background-color: $accent-color;
+        color: $card-color;
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover, &:focus {
+            box-shadow: $card-shadow;
+        }
+    }
+
+    &__icon {
+        margin-left: 10px;
+    }
+}

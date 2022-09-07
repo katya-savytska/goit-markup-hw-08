@@ -1,0 +1,82 @@
+$primary-text-color: #212121;
+$subtittle-text-color:#757575;
+$accent-color:#2196F3;
+$button-background-color:#F5F4FA;
+$section-color: #F5F4FA;
+$card-color: #ffffff;
+$background-color:#ffffff;
+
+$border-radius: 4px;
+$card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+0px 1px 1px rgba(0, 0, 0, 0.14),
+0px 2px 1px rgba(0, 0, 0, 0.2);
+
+@mixin flex($dis, $ai, $jc) {
+    display: $dis;
+    align-items: $ai;
+    justify-content: $jc;
+}
+    
+@mixin font($fw, $fs, $lh, $ls) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0px;
+} 
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+span {
+    color: $accent-color;
+}
+
+ul {
+    list-style: none;
+}
+
+link {
+    font-family: inherit;
+}
+
+
+.current::after {
+
+    @media screen and (min-width:768px) {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+
+        background-color: $accent-color; 
+    }
+   
+}

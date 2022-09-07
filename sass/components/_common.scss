@@ -1,0 +1,37 @@
+body {
+    color: $primary-text-color;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
+    }
+}
+
+section {
+    background-color: $card-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

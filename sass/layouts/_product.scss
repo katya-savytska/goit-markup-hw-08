@@ -1,0 +1,105 @@
+.product {
+    &__filtr {
+        @include flex(flex, null, center);
+        padding: 0;
+        margin: 0 auto 50px auto;
+    }
+
+    &__item {
+        margin-left: 8px;
+
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+
+    &__button {
+        @include font(500, 16px, 1.62, null);
+        padding: 6px 22px;
+        text-align: center;
+    
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover, &:focus {
+            box-shadow: $card-shadow;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+.card {
+    margin-left: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(3n+1) {
+        margin-left: 0;
+    }
+
+    &:nth-last-child(-n+3) {
+        margin-bottom: 0;
+    }
+
+    &__thumb {
+        position: relative;
+    }
+
+    &__desc {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #ffffff;
+        background-color: rgba(33, 150, 243, 0.9);
+        top: 0;
+        left: 0;
+
+        padding-top: 63px;
+        padding-left: 24px;
+
+        transform: translateY(100%);
+        opacity: 0;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: $primary-text-color;
+
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+            box-shadow: $card-shadow;
+        }
+
+        &:hover .card__desc {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    &__name {
+        padding: 20px 24px;
+        border-bottom: 1px solid #EEEEEE;
+        border-left: 1px solid #EEEEEE;
+        border-right: 1px solid #EEEEEE;
+    }
+
+    &__title {
+        @include font(700,18px, 2.25, 0.06em);
+        margin-bottom: 4px;
+    }
+
+    &__subtitle {
+        color: $subtittle-text-color;
+        font-size: 16px;
+        line-height: 1.87;
+    }
+}
