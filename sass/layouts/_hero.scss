@@ -3,23 +3,33 @@
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
         url(../images/hero.jpg);
-    padding: 200px 0 200px 0;
+
+    padding: 118px 0;
     margin: 0 auto;
     max-width: 1600px;
-    text-align: center;
+    text-align: center; 
+
+    @media screen and (min-width:1200px) {
+        padding: 200px 0 200px 0;
+    }
+    
 
     &__text {
         text-align: center;
-        width: 696px;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px;
         color: #ffffff;
-        font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;}
+        @include font (900, 26px, 1.62, 0.06em);
+        text-transform: uppercase;
+
+        @media screen and (min-width:1200px) {
+          width: 696px;   
+          font-size: 44px;
+          line-height: 1.36;
+        }
+        
+    }
 
     &__button {
         padding: 10px 32px;
@@ -28,15 +38,19 @@
         background-color: $accent-color;
         color: #ffffff;
         height: 50px;
-    }
+     }
 }
 
 .backdrop {
+    padding: 93px 15px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    
+   
+    overflow-y: scroll;
 
     transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 1;
@@ -44,14 +58,21 @@
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 528px;
-    height: 581px;
-    padding: 40px;
+    max-width: 420px;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    @media screen and (min-width:768px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 528px;
+        height: 581px;
+        padding: 40px;
+        
+    }
+    
 
     background-color: $background-color;
     box-shadow: $card-shadow;
@@ -143,7 +164,7 @@
     }
 
     &__checkbox {
-        @include flex(flex, center, center)
+        @include flex(flex, center, null)
     }
 
     &__input-check:checked + &__label-check span {
@@ -157,11 +178,15 @@
     }
 
     &__label-check {
+
         @include flex(flex, center, center);
-        @include font(400, 14px, 1.71, 0.03em);
+        @include font(400, 12px, 1.16, 0.03em);
         margin-bottom: 0;
         margin-right: 5px;
 
+        @media screen and (min-width:768px) {
+            @include font(400, 14px, 1.71, 0.03em);
+        }
         & span {
             @include flex(flex, center, center);
             width: 16px;
@@ -175,11 +200,16 @@
     }
 
     &__policy-link {
-        @include font(400, 14px, 1.71, 0.03em);
         margin: 0;
         color: $accent-color;
         text-decoration: none;
         border-bottom: 1px solid $accent-color;
+        @include font(400, 12px, 1.16, 0.03em);
+
+        @media screen and (min-width:768px) {
+            @include font(400, 14px, 1.71, 0.03em);
+        }
+       
     }
 
     &__button {

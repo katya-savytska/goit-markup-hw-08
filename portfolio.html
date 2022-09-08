@@ -17,8 +17,8 @@
     <body>
         <header class="header">
             <div class="header__container container">
+                <a href="./index.html" class="logo"><span>Web</span>Studio</a>
                 <nav class="site-nav">
-                    <a href="./index.html" class="logo"><span>Web</span>Studio</a>
                     <ul class="site-nav__menu">
                         <li class="site-nav__item">
                             <a href="./index.html" class="site-nav__link ">Студія</a>
@@ -43,6 +43,60 @@
                             </svg> +38 (096) 111-11-11</a>
                     </li>
                 </ul>
+        
+                <div class="mob-menu">
+                    <button type="button" class="mob-menu__button is-open" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="icon-menu" width="40" height="40">
+                            <use href="./images/icons.svg#icon-menu" class="icon-menu js-open-menu"></use>
+                        </svg>
+                    </button>
+                    <div class="mob-menu__container js-menu-container" id="mobile-menu">
+                        <button type="button" class="mob-menu__button is-open">
+                            <svg class="icon-menu" width="40" height="40">
+                                <use href="./images/icons.svg#icon-menu-close" class="icon-menu-close js-close-menu"></use>
+                            </svg>
+                        </button>
+                        <nav class="mob-site-nav">
+                            <ul class="mob-site-nav__menu">
+                                <li class="mob-site-nav__item">
+                                    <a href="./index.html"
+                                        class="mob-site-nav__link ">Студія</a>
+                                </li>
+                                <li class="mob-site-nav__item">
+                                    <a href="./portfolio.html" class="mob-site-nav__link mob-site-nav__link--current current">Портфоліо</a>
+                                </li>
+                                <li class="mob-site-nav__item">
+                                    <a href="" class="mob-site-nav__link">Контакти</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="mob-menu__contacts">
+                            <li class="mob-menu__item">
+                                <a href="mailto:info@devstudio.com"
+                                    class="mob-menu__link mob-menu__link--mail">info@devstudio.com</a>
+                            </li>
+                            <li class="mob-menu__item"><a href="tel:+380961111111" class="mob-menu__link mob-menu__link--phone">
+                                    +38 (096) 111-11-11</a>
+                            </li>
+                        </ul>
+                        <ul class="mob-menu__soc">
+                            <li class="mob-menu__soc-item">
+                                <a href="" class="mob-menu__soc-link">Instagram</a>
+                            </li>
+                            <li class="mob-menu__soc-item">
+                                <a href="" class="mob-menu__soc-link">Twitter</a>
+                            </li>
+                            <li class="mob-menu__soc-item">
+                                <a href="" class="mob-menu__soc-link">Facebook</a>
+                            </li>
+                            <li class="mob-menu__soc-item">
+                                <a href="" class="mob-menu__soc-link">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        
+        
             </div>
         </header>
         <main>
@@ -255,6 +309,10 @@
             </div>
         </footer>
         
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+            integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+            crossorigin="anonymous"></script>
+        <script defer src="./js/mobile-menu.js"></script>
     </body>
     
 </html>

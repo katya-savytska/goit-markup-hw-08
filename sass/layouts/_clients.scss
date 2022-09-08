@@ -1,6 +1,12 @@
 .clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+    
 
     &__text {
         @include font(700, 36px, 1.16, null);
@@ -9,16 +15,28 @@
     }
 
     &__list {
-        @include flex(flex, center, center);
-        margin: 0 auto;
-        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 0px;
+        padding: 0px;
+
+        @media screen and (min-width:1200px) {
+            @include flex(flex, center, center);
+            margin: 0 auto;
+        }
+        
     }
 
     &__item {
-        margin-left: 30px;
-
-        &:first-child {
-            margin-left: 0px;
+        width: 210px;
+    
+        @media screen and (min-width:768px) {
+            width: calc((100% - 30px) / 4);
+        }
+         @media screen and (min-width:1200px) {
+            width: 170px;
         }
     }
 
@@ -28,13 +46,12 @@
 
     &__link {
         @include flex(flex, center, center);
-        width: 170px;
         height: 92px;
         fill: #AFB1B8;
         border: 1px solid #AFB1B8;
         border-radius: $border-radius;
         transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+        
         &:hover, &:focus {
             border-color: $accent-color;
         }
