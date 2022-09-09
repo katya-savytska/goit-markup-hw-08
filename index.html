@@ -212,19 +212,43 @@
                 <ul class="services__list">
                     <li class="services__item">
                         <div class="services__thumb">
-                         <img src="./images/img1.jpg" alt="Разработка-сайтов" width="370" height="294">
-                         <p class="services__desc">Десктопні додатки</p>
+                            <picture>
+                                <source 
+                                  srcset="
+                                  ./images/img1.jpg 1x,
+                                  ./images/img1-2x.jpg 2x
+                                  "
+                                  media="(min-width:1200px)"
+                                />
+                                <img src="./images/img1.jpg" alt="Разработка-сайтов" width="370" height="294">
+                            </picture>
+                           <p class="services__desc">Десктопні додатки</p>
                         </div> 
                     </li>     
                     <li class="services__item">
                         <div class="services__thumb">
-                            <img src="./images/img2.jpg" alt="Разработка-приложений" width="370" height="294">
+                            <picture>
+                                <source srcset="
+                                    ./images/img2.jpg 1x,
+                                    ./images/img2-2x.jpg 2x
+                                    " 
+                                    media="(min-width:1200px)" 
+                                />
+                                <img src="./images/img2.jpg" alt="Разработка-приложений" width="370" height="294">
+                            </picture>
                             <p class="services__desc">Мобільні додатки</p>
                         </div>
                     </li> 
                     <li class="services__item">
                         <div class="services__thumb">
-                            <img src="./images/img3.jpg" alt="Дизайн" width="370" height="294">
+                            <picture>
+                                <source srcset="
+                                    ./images/img3.jpg 1x,
+                                    ./images/img3-2x.jpg 2x
+                                    " media="(min-width:1200px)" 
+                                />
+                                <img src="./images/img3.jpg" alt="Дизайн" width="370" height="294">
+                            </picture> 
                             <p class="services__desc">Дизайнерські рішення</p>
                         </div>     
                     </li>   
@@ -237,7 +261,25 @@
                 <h2 class="team__text">Наша команда</h2>
                 <ul class="team__member">
                     <li class="team__item">
-                        <img src="./images/img4.jpg" alt="Мужчина" width="270" height="260">
+                        <picture>
+                            <source srcset="
+                                ./images/img4.jpg 1x,
+                                ./images/img4-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                            />
+                            <source srcset="
+                                ./images/img4-tab.jpg 1x,
+                                ./images/img4-tab-2x.jpg 2x" 
+                                media="(min-width:768px)" 
+                            />
+                            <source srcset="
+                                ./images/img4-mob.jpg 1x,
+                                ./images/img4-mob-2x.jpg 2x" 
+                                media="(max-width:767px)" 
+                            />
+                            <img src="./images/img4.jpg" alt="Мужчина" width="270" height="260">
+                        </picture>
+                        
                         <div class="team-desc">
                             <h3 class="team-desc__title">Ігор Дем'яненко</h3>
                             <p class="team-desc__subtitle">Product Designer</p>
@@ -275,7 +317,25 @@
                     </li>
                     
                     <li class="team__item">
-                        <img src="./images/img5.jpg" alt="Женщина" width="270" height="260">
+                        <picture>
+                            <source srcset="
+                                ./images/img5.jpg 1x,
+                                ./images/img5-2x.jpg 2x" 
+                                media="(min-width:1200px)" 
+                            />
+                            <source srcset="
+                                ./images/img5-tab.jpg 1x,
+                                ./images/img5-tab-2x.jpg 2x" 
+                                media="(min-width:768px)" 
+                            />
+                            <source srcset="
+                                ./images/img5-mob.jpg 1x,
+                                ./images/img5-mob-2x.jpg 2x" 
+                                media="(max-width:767px)" 
+                            />
+                            <img src="./images/img5.jpg" alt="Женщина" width="270" height="260">
+                        </picture>
+
                         <div class="team-desc">
                             <h3 class="team-desc__title">Ольга Рєпіна</h3>
                             <p class="team-desc__subtitle">Frontend Developer</p>
@@ -313,7 +373,25 @@
                     </li>
                    
                     <li class="team__item">
-                        <img src="./images/img6.jpg" alt="Мужчина" width="270" height="260">
+                        <picture>
+                            <source srcset="
+                                ./images/img6.jpg 1x,
+                                ./images/img6-2x.jpg 2x" 
+                                media="(min-width:1200px)" 
+                            />
+                            <source srcset="
+                                ./images/img6-tab.jpg 1x,
+                                ./images/img6-tab-2x.jpg 2x" 
+                                media="(min-width:768px)" 
+                            />
+                            <source srcset="
+                                ./images/img6-mob.jpg 1x,
+                                ./images/img6-mob-2x.jpg 2x" 
+                                media="(max-width:767px)" 
+                            />
+                            <img src="./images/img6.jpg" alt="Мужчина" width="270" height="260">
+                        </picture>
+                        
                         <div class="team-desc">
                             <h3 class="team-desc__title">Микола Тарасов</h3>
                             <p class="team-desc__subtitle">Marketing</p>
@@ -352,7 +430,25 @@
                     </li>
                    
                     <li class="team__item">
-                        <img src="./images/img7.jpg" alt="Мужчина" width="270" height="260">
+                        <picture>
+                            <source srcset="
+                                ./images/img7.jpg 1x,
+                                ./images/img7-2x.jpg 2x" 
+                                media="(min-width:1200px)" 
+                            />
+                            <source srcset="
+                                ./images/img7-tab.jpg 1x,
+                                ./images/img7-tab-2x.jpg 2x" 
+                                media="(min-width:768px)" 
+                            />
+                            <source srcset="
+                                ./images/img7-mob.jpg 1x,
+                                ./images/img7-mob-2x.jpg 2x" 
+                                media="(max-width:767px)" 
+                            />
+                            <img src="./images/img6.jpg" alt="Мужчина" width="270" height="260">
+                        </picture>
+                        
                         <div class="team-desc">
                             <h3 class="team-desc__title">Михайло Єрмаков</h3>
                             <p class="team-desc__subtitle">UI Designer</p>

@@ -179,14 +179,15 @@
         
         &.is-open {
             display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
     }
 
     &__contacts {
         display: flex;
         flex-direction: column-reverse;
-
-        margin-left: auto;
         margin-top: 0px;
         margin-bottom: 0px;
         padding: 0px;
@@ -260,7 +261,7 @@
     &__item {
         margin-bottom: 32px;
         &:last-child {
-            margin-bottom: 302px;
+            margin-bottom: 200px;
         }
     }
 
