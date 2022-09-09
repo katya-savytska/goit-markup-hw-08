@@ -7,7 +7,9 @@
     padding: 118px 0;
     margin: 0 auto;
     max-width: 1600px;
-    text-align: center; 
+    text-align: center;
+    background-position: center;
+    background-size: cover;
 
     @include retina {
         background-image: $background-gradient,
@@ -48,6 +50,10 @@
         @include font (900, 26px, 1.62, 0.06em);
         text-transform: uppercase;
 
+        @media screen and (min-width:768px) {
+            width: 360px;
+        }
+
         @media screen and (min-width:1200px) {
           width: 696px;   
           font-size: 44px;
@@ -69,6 +75,7 @@
 .backdrop {
     padding: 93px 15px;
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -77,8 +84,7 @@
    
     overflow-y: scroll;
 
-    transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 1;
+    transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -189,7 +195,7 @@
     }
 
     &__checkbox {
-        @include flex(flex, center, null)
+        @include flex(flex, center, center);
     }
 
     &__input-check:checked + &__label-check span {
