@@ -3,17 +3,21 @@
         @include flex(flex, null, flex-start);
         flex-wrap: wrap; 
         gap: 8px;
-        margin: 0 auto 50px auto;
+        row-gap: 15px;
+        margin: 0 auto 40px auto;
         padding: 0;
-
+        
         @media screen and (min-width:768px) {
            @include flex(flex, null, center);
-          
+           margin: 0 auto 30px auto;
         }
-        
+
+        @media screen and (min-width:1200px) {
+            margin: 0 auto 50px auto;
+        }
+
     }
 
-    &__item {}
 
     &__button {
         @include font(500, 16px, 1.62, null);
@@ -40,6 +44,10 @@
     margin-bottom: 30px;
     width: 100%;
     max-width: 450px;
+
+    &:last-child {
+        margin: 0;
+    }
 
     @media screen and (min-width:768px) and (max-width:1199px) {
         margin-left: 30px;
@@ -73,6 +81,7 @@
 
     &__thumb {
         position: relative;
+        overflow: hidden;
     }
 
     &__desc {

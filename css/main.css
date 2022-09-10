@@ -368,6 +368,7 @@ button:hover, button:focus {
 }
 .mob-menu__soc {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 32px, 0, 0, 0;
 }
@@ -403,9 +404,6 @@ button:hover, button:focus {
 }
 .mob-site-nav__item {
   margin-bottom: 32px;
-}
-.mob-site-nav__item:last-child {
-  margin-bottom: 200px;
 }
 .mob-site-nav__link {
   font-family: inherit;
@@ -515,10 +513,12 @@ button:hover, button:focus {
 }
 
 .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 420px;
-  width: 100%;
   padding: 30px;
-  position: relative;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -750,7 +750,7 @@ button:hover, button:focus {
   margin-bottom: 10px;
   text-transform: uppercase;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .features__title {
     text-align: center;
   }
@@ -940,11 +940,6 @@ button:hover, button:focus {
 .clients__item {
   width: 210px;
 }
-@media screen and (min-width: 768px) {
-  .clients__item {
-    width: calc((100% - 30px) / 4);
-  }
-}
 @media screen and (min-width: 1200px) {
   .clients__item {
     width: 170px;
@@ -975,13 +970,20 @@ button:hover, button:focus {
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 0 auto 50px auto;
+  row-gap: 15px;
+  margin: 0 auto 40px auto;
   padding: 0;
 }
 @media screen and (min-width: 768px) {
   .product__filtr {
     display: flex;
     justify-content: center;
+    margin: 0 auto 30px auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product__filtr {
+    margin: 0 auto 50px auto;
   }
 }
 .product__button {
@@ -1006,6 +1008,9 @@ button:hover, button:focus {
   margin-bottom: 30px;
   width: 100%;
   max-width: 450px;
+}
+.card:last-child {
+  margin: 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .card {
@@ -1035,6 +1040,7 @@ button:hover, button:focus {
 }
 .card__thumb {
   position: relative;
+  overflow: hidden;
 }
 .card__desc {
   position: absolute;
@@ -1102,7 +1108,7 @@ button:hover, button:focus {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__container {
-    align-items: flex-start;
+    align-items: baseline;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -1132,6 +1138,9 @@ button:hover, button:focus {
   padding: 0px;
   margin: 0px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-adress__contacts--adress {
+  color: #ffffff;
 }
 .footer-adress__contacts:hover, .footer-adress__contacts:focus {
   color: #2196F3;

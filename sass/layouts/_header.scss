@@ -228,6 +228,7 @@
 
     &__soc {
         display: flex;
+        flex-wrap: wrap;
         padding: 0;
         margin: 32px, 0, 0, 0;
     
@@ -267,9 +268,6 @@
 
     &__item {
         margin-bottom: 32px;
-        &:last-child {
-            margin-bottom: 200px;
-        }
     }
 
     &__link {
