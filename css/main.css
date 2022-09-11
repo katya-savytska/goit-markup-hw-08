@@ -1009,9 +1009,6 @@ button:hover, button:focus {
   width: 100%;
   max-width: 450px;
 }
-.card:last-child {
-  margin: 0;
-}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .card {
     margin-left: 30px;
